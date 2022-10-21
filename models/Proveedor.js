@@ -6,6 +6,7 @@ const proveedorSchema = new Schema({
     type: String,
     required : true,
     unique: true,
+    uppercase : true,
     maxLength: 40
 },
 email: {

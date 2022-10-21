@@ -14,7 +14,7 @@ exports.createProveedor = async (req, res) => {
     const proveedor = await proveedorService.createProveedor(req.body);
     res.json({ data: proveedor, status: "success" });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(400).json({ error: err.message });
   }
 };
 
@@ -23,7 +23,7 @@ exports.getProveedorById = async (req, res) => {
     const proveedor = await proveedorService.getProveedorById(req.params.id);
     res.json({ data: proveedor, status: "success" });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(400).json({ error: err.message });
   }
 };
 
@@ -32,7 +32,7 @@ exports.updateProveedor = async (req, res) => {
     const proveedor = await proveedorService.updateProveedor(req.params.id, req.body);
     res.json({ data: proveedor, status: "success" });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(400).json({ error: err.message });
   }
 };
 
@@ -41,6 +41,6 @@ exports.deleteProveedor = async (req, res) => {
     const proveedor = await proveedorService.deleteProveedor(req.params.id);
     res.json({ data: proveedor, status: "success" });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(400).json({ error: err.message });
   }
 };
